@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D365 Helper – Datenschutzerklärung / Privacy Policy</title>
+  <link rel="icon" href="icon128.png">
+  <style>
+    :root { --blue: #1e40af; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.6 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); }
+    header { background: linear-gradient(135deg, #1e3a9f, #2563eb); color: #fff; padding: 32px 20px; }
+    header .wrap { display: flex; align-items: center; gap: 16px; }
+    header img { width: 56px; height: 56px; }
+    header h1 { margin: 0; font-size: 26px; }
+    header p { margin: 2px 0 0; opacity: .85; }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    main { padding: 8px 20px 48px; }
+    nav { margin: 20px 0 8px; font-size: 14px; }
+    nav a { color: var(--blue); margin-right: 16px; }
+    section { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 8px 24px 20px; margin-top: 20px; }
+    h2 { color: var(--blue); font-size: 20px; }
+    h3 { font-size: 16px; margin-bottom: 4px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: var(--bg); }
+    code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .table-wrap { overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <img src="icon128.png" alt="">
+      <div>
+        <h1>D365 Helper</h1>
+        <p>Datenschutzerklärung · Privacy Policy</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav><a href="#de">Deutsch</a><a href="#en">English</a></nav>
+    <p class="muted">Stand / Last updated: 26.09.2026</p>
+
+    <section id="de" lang="de">
+      <h2>Datenschutzerklärung (Deutsch)</h2>
+
+      <h3>Keine Datenerhebung</h3>
+      <p>Die Browser-Erweiterung <strong>D365 Helper</strong> erhebt, überträgt oder teilt <strong>keine</strong> personenbezogenen Daten – weder mit dem Entwickler noch mit Dritten. Es gibt keine Analyse-, Tracking- oder Werbedienste.</p>
+
+      <h3>Lokale Speicherung</h3>
+      <p>Alle Eingaben (Favoriten, eigene Tabellen und Klassen, URL-Snippets, Company-Farben, Einstellungen sowie die zuletzt genutzte D365-Umgebung und der Company-Code) werden ausschließlich im Browser über die Chrome-Storage-API (<code>chrome.storage.sync</code>) gespeichert. Ist die Browser-Synchronisierung aktiv, synchronisiert der Browser-Anbieter diese Daten mit dem eigenen Google- bzw. Microsoft-Konto des Nutzers.</p>
+
+      <h3>Berechtigungen</h3>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Berechtigung</th><th>Zweck</th></tr>
+          <tr><td><code>storage</code></td><td>Speichern von Favoriten, eigenen Einträgen und Einstellungen</td></tr>
+          <tr><td><code>scripting</code></td><td>Einfügen der Buttons in die D365-Navigationsleiste und des Company-Badges; Auslesen des Formular-/Datenquellennamens der aktuellen D365-Seite, um die passende Tabelle vorzuschlagen</td></tr>
+          <tr><td><code>sidePanel</code></td><td>Anzeige der Oberfläche als Seitenleiste des Browsers</td></tr>
+          <tr><td><code>https://*.dynamics.com/*</code></td><td>Die Erweiterung arbeitet ausschließlich auf Microsoft Dynamics 365 Finance &amp; Operations. Sie liest die URL von D365-Tabs, um Umgebung und Company zu erkennen.</td></tr>
+        </table>
+      </div>
+
+      <h3>Netzwerkzugriffe</h3>
+      <p>Die Erweiterung sendet keine Anfragen an externe Server. Sie öffnet lediglich D365-Seiten in Browser-Tabs, wenn der Nutzer dies auslöst.</p>
+
+      <h3>Kontakt</h3>
+      <p>Ronald Steffen · ronald.steffen@outlook.de</p>
+
+      <p class="muted">D365 Helper ist ein unabhängiges Werkzeug und steht in keiner Verbindung zu Microsoft. Dynamics 365 ist eine Marke der Microsoft Corporation.</p>
+    </section>
+
+    <section id="en" lang="en">
+      <h2>Privacy Policy (English)</h2>
+
+      <h3>No data collection</h3>
+      <p>The browser extension <strong>D365 Helper</strong> does <strong>not</strong> collect, transmit, or share any personal data – neither with the developer nor with any third party. There are no analytics, tracking, or advertising services.</p>
+
+      <h3>Local storage</h3>
+      <p>All user data (favorites, custom tables and classes, URL snippets, company colors, settings, and the last used D365 environment and company code) is stored exclusively in the browser using the Chrome Storage API (<code>chrome.storage.sync</code>). If browser sync is enabled, the browser vendor syncs this data to the user's own Google or Microsoft account.</p>
+
+      <h3>Permissions</h3>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Permission</th><th>Purpose</th></tr>
+          <tr><td><code>storage</code></td><td>Save favorites, custom entries, and settings</td></tr>
+          <tr><td><code>scripting</code></td><td>Inject navigation bar buttons and the company badge into D365 pages; read the form / data source name of the current D365 page to suggest the matching table</td></tr>
+          <tr><td><code>sidePanel</code></td><td>Display the interface as a browser side panel</td></tr>
+          <tr><td><code>https://*.dynamics.com/*</code></td><td>The extension operates exclusively on Microsoft Dynamics 365 Finance &amp; Operations. It reads the URL of D365 tabs to detect the environment and company.</td></tr>
+        </table>
+      </div>
+
+      <h3>Network requests</h3>
+      <p>The extension makes no requests to external servers. It only opens D365 pages in browser tabs at the user's request.</p>
+
+      <h3>Contact</h3>
+      <p>Ronald Steffen · ronald.steffen@outlook.de</p>
+
+      <p class="muted">D365 Helper is an independent tool and is not affiliated with, endorsed by, or sponsored by Microsoft. Dynamics 365 is a trademark of Microsoft Corporation.</p>
+    </section>
+  </main>
+</body>
+</html>
