@@ -52,6 +52,7 @@
 
       <h3>Lokale Speicherung</h3>
       <p>Alle Eingaben (Favoriten, eigene Tabellen und Klassen, URL-Snippets, Company-Farben, Einstellungen, die D365-Umgebungsadressen mit vom Nutzer vergebenem Typ, Farbe und optionalem Organisationsnamen sowie die zuletzt genutzte D365-Umgebung und die zuletzt genutzten Company-Codes) werden ausschließlich im Browser über die Chrome-Storage-API (<code>chrome.storage.sync</code>) gespeichert. Ist die Browser-Synchronisierung aktiv, synchronisiert der Browser-Anbieter diese Daten mit dem eigenen Google- bzw. Microsoft-Konto des Nutzers.</p>
+      <p>Ist der Verlauf eingeschaltet (Standard), speichert die Erweiterung zusätzlich die letzten 50 besuchten D365-Seiten (Umgebungsadresse, Company-Code, Menüpunkt und Parameter, Seitentitel, Zeitpunkt) im lokalen Speicher des Browsers (<code>chrome.storage.local</code>). Der Verlauf wird weder synchronisiert noch exportiert und lässt sich in den Einstellungen ausschalten und leeren.</p>
       <p>Die optionale Export-Funktion speichert diese Daten als JSON-Datei auf dem eigenen Gerät des Nutzers. Die Erweiterung lädt die Datei nirgendwohin hoch; beim Import wird eine Datei nur lokal im Browser gelesen.</p>
 
       <h3>Berechtigungen</h3>
@@ -82,6 +83,7 @@
 
       <h3>Local storage</h3>
       <p>All user data (favorites, custom tables and classes, URL snippets, company colors, settings, the D365 environment URLs with the type, color and optional organization name the user assigns to them, and the last used D365 environment and company codes) is stored exclusively in the browser using the Chrome Storage API (<code>chrome.storage.sync</code>). If browser sync is enabled, the browser vendor syncs this data to the user's own Google or Microsoft account.</p>
+      <p>If the history feature is enabled (default), the extension additionally keeps the last 50 visited D365 pages (environment URL, company code, menu item and parameters, page title, time) in the browser's local storage (<code>chrome.storage.local</code>). The history is neither synced nor exported and can be turned off and cleared in the settings.</p>
       <p>The optional export function saves this data as a JSON file on the user's own device. The extension does not upload the file anywhere; importing a file only reads it locally in the browser.</p>
 
       <h3>Permissions</h3>
