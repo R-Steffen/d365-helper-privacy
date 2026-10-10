@@ -51,7 +51,7 @@
       <p>Die Browser-Erweiterung <strong>D365 Helper</strong> erhebt, überträgt oder teilt <strong>keine</strong> personenbezogenen Daten – weder mit dem Entwickler noch mit Dritten. Es gibt keine Analyse-, Tracking- oder Werbedienste.</p>
 
       <h3>Lokale Speicherung</h3>
-      <p>Alle Eingaben (Favoriten, eigene Tabellen und Klassen, URL-Snippets, Company-Farben, Einstellungen, die D365-Umgebungsadressen mit vom Nutzer vergebenem Typ, Farbe und optionalem Organisationsnamen sowie die zuletzt genutzte D365-Umgebung und die zuletzt genutzten Company-Codes) werden ausschließlich im Browser über die Chrome-Storage-API (<code>chrome.storage.sync</code>) gespeichert. Ist die Browser-Synchronisierung aktiv, synchronisiert der Browser-Anbieter diese Daten mit dem eigenen Google- bzw. Microsoft-Konto des Nutzers.</p>
+      <p>Alle Eingaben (Favoriten, eigene Tabellen und Klassen, URL-Snippets, Notizen je Umgebung und Company, Company-Farben, Einstellungen, die D365-Umgebungsadressen mit vom Nutzer vergebenem Typ, Farbe und optionalem Organisationsnamen sowie die zuletzt genutzte D365-Umgebung und die zuletzt genutzten Company-Codes) werden ausschließlich im Browser über die Chrome-Storage-API (<code>chrome.storage.sync</code>) gespeichert. Ist die Browser-Synchronisierung aktiv, synchronisiert der Browser-Anbieter diese Daten mit dem eigenen Google- bzw. Microsoft-Konto des Nutzers.</p>
       <p>Ist der Verlauf eingeschaltet (Standard), speichert die Erweiterung zusätzlich die letzten 50 besuchten D365-Seiten (Umgebungsadresse, Company-Code, Menüpunkt und Parameter, Seitentitel, Zeitpunkt) im lokalen Speicher des Browsers (<code>chrome.storage.local</code>). Der Verlauf wird weder synchronisiert noch exportiert und lässt sich in den Einstellungen ausschalten und leeren.</p>
       <p>Um nach einiger Zeit einmalig um eine Bewertung im Store zu bitten, zählt die Erweiterung lokal, wie oft das Side Panel geöffnet wurde, und merkt sich das Datum der ersten Nutzung (<code>chrome.storage.local</code>). Diese Angaben verlassen den Browser nicht.</p>
       <p>Der optionale OData Query Builder liest Geschäftsdaten aus der eigenen D365-Umgebung des Nutzers nur, wenn der Nutzer eine Abfrage ausführt. Die Anfrage geht direkt von der Erweiterung an die D365-Umgebung des Nutzers und nutzt dessen bestehende D365-Anmeldung im Browser (falls das nicht möglich ist, aus dem geöffneten D365-Tab); die Ergebnisse werden nur im Browser angezeigt und nur auf Klick des Nutzers in eine Datei oder die Zwischenablage geschrieben. Gespeicherte Abfragen (Entität, Felder, Filter) liegen in <code>chrome.storage.sync</code>; die Liste der Entitäten und Felder (Metadaten) wird lokal im Browser zwischengespeichert. Abfrageergebnisse speichert die Erweiterung nicht.</p>
@@ -67,6 +67,10 @@
           <tr><td><code>https://*.dynamics.com/*</code></td><td>Die Erweiterung arbeitet ausschließlich auf Microsoft Dynamics 365 Finance &amp; Operations. Sie liest die URL von D365-Tabs, um Umgebung und Company zu erkennen.</td></tr>
         </table>
       </div>
+
+      <h3>Anzeige in D365</h3>
+      <p>Auf D365-Seiten blendet die Erweiterung – wenn eingeschaltet – ein Band mit Company, Umgebungstyp, Organisation und den eigenen Notizen des Nutzers ein. Diese Anzeige entsteht lokal im Browser; es werden dabei keine Daten aus D365 gelesen oder übertragen.</p>
+      <p>Der Vergleich zweier Umgebungen im OData Query Builder führt dieselbe, vom Nutzer gestartete Abfrage in zwei Umgebungen des Nutzers aus – mit dessen eigener Anmeldung. Die Ergebnisse werden nur im Browser verglichen und angezeigt.</p>
 
       <h3>Netzwerkzugriffe</h3>
       <p>Die Erweiterung sendet keine Anfragen an externe Server. Sie öffnet lediglich Seiten in Browser-Tabs, wenn der Nutzer dies auslöst: D365-Seiten sowie – über die Buttons „Bewerten“, „Auf LinkedIn teilen“ und „Feedback senden“ – die Store-Seite, LinkedIn bzw. das E-Mail-Programm des Nutzers.</p>
@@ -84,7 +88,7 @@
       <p>The browser extension <strong>D365 Helper</strong> does <strong>not</strong> collect, transmit, or share any personal data – neither with the developer nor with any third party. There are no analytics, tracking, or advertising services.</p>
 
       <h3>Local storage</h3>
-      <p>All user data (favorites, custom tables and classes, URL snippets, company colors, settings, the D365 environment URLs with the type, color and optional organization name the user assigns to them, and the last used D365 environment and company codes) is stored exclusively in the browser using the Chrome Storage API (<code>chrome.storage.sync</code>). If browser sync is enabled, the browser vendor syncs this data to the user's own Google or Microsoft account.</p>
+      <p>All user data (favorites, custom tables and classes, URL snippets, notes per environment and company, company colors, settings, the D365 environment URLs with the type, color and optional organization name the user assigns to them, and the last used D365 environment and company codes) is stored exclusively in the browser using the Chrome Storage API (<code>chrome.storage.sync</code>). If browser sync is enabled, the browser vendor syncs this data to the user's own Google or Microsoft account.</p>
       <p>If the history feature is enabled (default), the extension additionally keeps the last 50 visited D365 pages (environment URL, company code, menu item and parameters, page title, time) in the browser's local storage (<code>chrome.storage.local</code>). The history is neither synced nor exported and can be turned off and cleared in the settings.</p>
       <p>To ask once, after some time, for a rating in the store, the extension counts locally how often the side panel was opened and remembers the date of first use (<code>chrome.storage.local</code>). This information never leaves the browser.</p>
       <p>The optional OData Query Builder reads business data from the user's own D365 environment only when the user runs a query. The request goes directly from the extension to the user's D365 environment using the user's existing D365 sign-in in the browser (if that is not possible, from the user's open D365 tab); the results are only displayed in the browser and are written to a file or the clipboard only when the user clicks export or copy. Saved queries (entity, fields, filters) are stored in <code>chrome.storage.sync</code>; the list of entities and fields (metadata) is cached locally in the browser. No query results are stored by the extension.</p>
@@ -100,6 +104,10 @@
           <tr><td><code>https://*.dynamics.com/*</code></td><td>The extension operates exclusively on Microsoft Dynamics 365 Finance &amp; Operations. It reads the URL of D365 tabs to detect the environment and company.</td></tr>
         </table>
       </div>
+
+      <h3>Display in D365</h3>
+      <p>On D365 pages the extension – if enabled – shows a band with the company, environment type, organization and the user's own notes. This display is created locally in the browser; no data is read from or sent to D365 for it.</p>
+      <p>Comparing two environments in the OData Query Builder runs the same user-initiated query in two of the user's environments, with the user's own sign-in. The results are only compared and displayed in the browser.</p>
 
       <h3>Network requests</h3>
       <p>The extension makes no requests to external servers. It only opens pages in browser tabs at the user's request: D365 pages and – via the buttons “Rate”, “Share on LinkedIn” and “Send feedback” – the store page, LinkedIn or the user's email program.</p>
